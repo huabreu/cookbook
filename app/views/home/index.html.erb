@@ -2,16 +2,14 @@
 
 
 
-<dl>
-  <% @recipes.each do |recipe| %>
-  <dt>
-    <strong>Nome:</strong><%= recipe.name %>
-  </dt>
+<% @recipes.each do |recipe| %>
 
-  <dd>
-    <strong>Tipo:</strong><%= recipe.recipe_type %>
-  </dd>
-  <% end %>
-</dl>
+<!-- <a href="/receipes/<%= recipe.id %>" > <%= recipe.name %> </a>  -->
+
+  <%= link_to recipe.name, recipe %>
+
+<br />
+
+<% end %>
 
 
